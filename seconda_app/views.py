@@ -17,7 +17,7 @@ def if_else_elif(request):
         'var2' : 100.0,
         'var3' : 100.50,
     }
-    return render(request,"if_else_elif", context)
+    return render(request,"if_else_elif.html", context)
 
 def es_for(request):
     context={
