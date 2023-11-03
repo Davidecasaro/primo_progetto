@@ -21,21 +21,8 @@ def media(request):
     return render(request,"media.html", context)
 
 def voti(request):
-    diz = ['studente1',8,'studente2',7,'studente3',3]
-    fstStud=diz[0] 
-    sndStud=diz[2]
-    trdStud=diz[4]
-    fstVoto=diz[1] 
-    sndVoto=diz[3]
-    trdVoto=diz[5]
-
     context={
-        'fstStud' : fstStud,
-        'sndStud' : fstStud,
-        'trdStud' : fstStud,
-        'fstVoto' : fstVoto,
-        'sndVoto' : sndVoto,
-        'trdVoto' : trdVoto,
+         'my_dict' : {'stud1': 8, 'stud2': 7,'stud3':3}
     }
     return render(request,"voti.html", context)
 

@@ -3,23 +3,10 @@
     {%block title%} {{block.super}} Voti {%endblock title%}
 
     {%block content%}
-    <table border="1">
-        <tr>
-            <th>Studente</th>
-            <th>Voto</th>
-        </tr>
-        <tr>
-            <td>{{fstStud}}</td>
-            <td>{{fstVoto}}</td>
-        </tr>
-        <tr>
-            <td>{{sndStud}}</td>
-            <td>{{sndVoto}}</td>
-        </tr>
-        <tr>
-            <td>{{trdStud}}</td>
-            <td>{{trdVoto}}</td>
-        </tr>
-    </table>
+        <ul>
+            {% for stud, voto in my_dict.items %}
+                <li>{{ stud }}: {{ voto }}</li>
+            {% endfor %}
+        </ul>
     {%endblock content%}
      
