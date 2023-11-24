@@ -4,7 +4,7 @@
 
     {%block content%}
     <ol>
-        <li><a href="{% url 'news:homepage'%}">Homepage </a></li>
-        <li><a href="{% url 'news:articoli/<int:pk>'%}">articolo detail</a></li>
+        <li><a href="{% url 'news:homepageNews'%}">Homepage </a></li>
+        <li><a href="{% url 'news:articoli_detail' 1%}">articolo detail</a></li>
     </ol>
     {%endblock content%}

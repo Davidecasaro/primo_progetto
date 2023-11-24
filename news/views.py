@@ -33,6 +33,9 @@ def home(request):
     return HttpResponse("<h1>" + response + "</h1>")
 """
 
+def index(request):
+    return render(request,"indexNews.html")
+
 def home(request):
     articoli=Articolo.objects.all()
     giornalisti=Giornalista.objects.all()
