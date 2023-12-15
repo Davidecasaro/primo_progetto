@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+
+    {%block title%} {{block.super}} Document {%endblock title%}
+
+    {%block content%}
+    {% for materia in materie %}
+        <li>{{materia}}</li>
+    {% endfor %} 
+    {%endblock content%}

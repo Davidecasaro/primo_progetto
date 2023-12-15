@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+    {%block title%} {{block.super}} Document {%endblock title%}
+
+    {%block content%}
+    {% for stud,dati in voti.items %}
+        <li>{{stud}}</li>
+    {% for mat,voto,assenze in dati %}
+        <ul>-{{mat}},{{voto}},{{assenze}}</ul>
+    {% endfor %}
+    {% endfor %}
+    {%endblock content%}
