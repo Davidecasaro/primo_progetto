@@ -17,8 +17,8 @@ def wiew_b(request):
 def wiew_c(request):
     somma=0
     media=0
-    for stud,dati in voti.items 
-        for mat,voto,assenze in dati 
+    for(stud,dati in voti.items): 
+        for(mat,voto,assenze in dati):
             somma+=voto
             media=somma/5
           
@@ -39,8 +39,8 @@ def wiew_d(request):
     minStd={{minStud}}
     voti={{voti}}
 
-    for(stud,dati in voti.items)
-        for(i < 5){
+    for(stud,dati in voti.items):
+        for(i < 5):
             if(voti[stud][i][1] < min){
                 min=voti[stud][i][1]
                 minMat=voti[stud][i][0]
@@ -59,7 +59,7 @@ def wiew_d(request):
                 maxMat+=voti[stud][i][0]
                 maxStud+=stud
             }
-        }
+        
     context={
         'voti' : {'Giuseppe Gullo':[("Matematica",9,0),("Italiano",7,3),("Inglese",7,4),("Storia",7,4),("Geografia",5,7)],
            'Antonio Barbera':[("Matematica",8,1),("Italiano",6,1),("Inglese",9,0),("Storia",8,2),("Geografia",8,1)],
