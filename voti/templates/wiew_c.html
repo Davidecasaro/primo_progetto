@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+
+    {%block title%} {{block.super}} Document {%endblock title%}
+
+    {%block content%}
+    {% for stud,dati in voti.items %}
+        <b>{{stud}}:{{media}}</b><br>
+    {% endfor %}
+    {%endblock content%}

@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+    {%block title%} {{block.super}} Document {%endblock title%}
+
+    {%block content%}
+    <b>voto massimo: {{max}}</b>
+    <b>materie con voto massimo: {{maxMat}}</b>
+    <b>studenti con voto massimo: {{maxStud}}</b>
+    <b>voto minimo: {{min}}</b>
+    <b>materie con voto minimo: {{minMat}}</b>
+    <b>studenti con voto minimo: {{minStud}}</b>
+    {%endblock content%}

@@ -43,6 +43,30 @@
                   <a class="dropdown-item" href="{% url 'seconda_app:es_for'%}">es for</a>
                 </div>
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                news
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'news:indexNews'%}">index news</a>
+                  <a class="dropdown-item" href="{% url 'news:homepageNews'%}">homepage</a>
+                  <a class="dropdown-item" href="{% url 'news:lista_articoli'%}">lista articoli</a>
+                  <a class="dropdown-item" href="{% url 'news:lista_giornalisti'%}">lista giornalisti</a>
+                  <a class="dropdown-item" href="{% url 'news:query'%}">query</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                voti
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'voti:indexVoti'%}">index voti</a>
+                  <a class="dropdown-item" href="{% url 'voti:wiew_a'%}">wiew_a</a>
+                  <a class="dropdown-item" href="{% url 'voti:wiew_b'%}">wiew_b</a>
+                  <a class="dropdown-item" href="{% url 'voti:wiew_c'%}">wiew_c</a>
+                  <a class="dropdown-item" href="{% url 'voti:wiew_d'%}">wiew_d</a>
+                </div>
+              </li>
           </ul>
         </div>
       </nav>
@@ -50,6 +74,7 @@
     <div class="container my-4">
         {%block content%}
         {%endblock content%}
+        
         {%block script%}
         {%endblock script%}
 
