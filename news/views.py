@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Articolo, Giornalista
+from django.http import JsonResponse
 import datetime
+
 
 """
 def home(request):
@@ -207,6 +209,33 @@ def giornalista_api(request, pk):
             "error":{
                 "code": 404,
                 "message":"Giornalista non trovato"
+            }},
+            status=404)
+    return response
+
+def articoli_list_api(request):
+    articoli=Articolo.objects.all()
+    data={'articolo':list(articoli.values("pk","titolo", "contenuto","giornalista","data","visualizzazioni"))}
+    response=JsonResponse(data)
+    return response
+
+def articolo_api(request, pk):
+    try:
+        articolo=Articolo.objects.get(pk=pk)
+        data={'articolo':{
+            "titolo":articolo.titolo, 
+            "contenuto":articolo.contenuto,
+            "giornalista":articolo.giornalista,
+            "data":articolo.data,
+            "visualizzazioni":articolo.visualizzazioni,
+            }
+        }
+        response=JsonResponse(data)
+    except Articolo.DoesNotExist:
+        response=JsonResponse({
+            "error":{
+                "code": 404,
+                "message":"Articolo non trovato"
             }},
             status=404)
     return response
